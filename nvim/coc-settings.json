@@ -1,0 +1,26 @@
+{
+"languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp", "h"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "highlight": {
+          "lsRanges": true
+        }
+      }
+  }
+},
+"initializationOptions": {
+  // ...
+  // This will re-index the file on buffer change which is definitely a performance hit. See if it works for you
+  "index": {
+    "onChange": true
+  },
+  // This is mandatory!
+  "highlight": { "lsRanges" : true }
+}
+}
